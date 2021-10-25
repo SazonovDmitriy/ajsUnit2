@@ -1,7 +1,22 @@
-import { heroes } from "..game";
+import heroes from "../game.js";
 
 test('health check', () => {
-    const expected = 100;
+    let health = 50;
+    const expected = 'healthy';
+    const recevied = heroes(health);
+    expect(recevied).toBe(expected);
+});
+
+test('health check', () => {
+    let health = 49;
+    const expected = 'wounded';
+    const recevied = heroes(health);
+    expect(recevied).toBe(expected);
+});
+
+test('health check', () => {
+    let health = 14;
+    const expected = 'critical';
     const recevied = heroes(health);
     expect(recevied).toBe(expected);
 });
