@@ -1,7 +1,7 @@
 import heroes from "../game.js";
 
 test('health check', () => {
-    let health = 50;
+    let health = 51;
     const expected = 'healthy';
     const recevied = heroes(health);
     expect(recevied).toBe(expected);
